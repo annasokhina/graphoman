@@ -1,3 +1,3 @@
 # Graphoman
 <p>Design studio website</p>
-<a href="https://annasokhina.github.io/graphoman/">View</a>
+<a href="https://sokhann.github.io/graphoman/">View</a>
