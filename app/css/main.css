@@ -411,7 +411,7 @@ p {
 
 .btn {
     color: #fff;
-    width:8rem;
+    width: 8rem;
     display: inline-block;
     border: none;
     text-decoration: none;
@@ -462,9 +462,10 @@ p {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/bg.jpg)
 }
 
 .header::before {
@@ -485,16 +486,16 @@ p {
     padding: 1rem
 }
 
-.header__content .header__content__title {
+.header__content .heade__title {
     padding-bottom: 9rem
 }
 
-.header__content .header__content__title h1 {
+.header__content .heade__title h1 {
     font-family: luciano, sans-serif;
     font-size: 4rem
 }
 
-.header__content .header__content__title h1 span {
+.header__content .heade__title h1 span {
     display: block;
     font-size: 6rem;
     text-transform: uppercase;
@@ -502,7 +503,7 @@ p {
     line-height: 1.2
 }
 
-.header__content .header__content__title h2 {
+.header__content .heade__title h2 {
     padding-top: 1rem;
     text-transform: uppercase;
     font-family: roboto-c, sans-serif;
@@ -510,11 +511,11 @@ p {
     opacity: .8
 }
 
-.header__content .header__nav .nav__item {
+.header__content .header__nav .nav-item {
     padding: 0 1rem
 }
 
-.header__content .header__nav .nav__item .nav__link {
+.header__content .header__nav .nav-item .nav-item__link {
     position: relative;
     display: block;
     padding: 0 .4rem;
@@ -527,11 +528,11 @@ p {
     transition: .5s ease
 }
 
-.header__content .header__nav .nav__item .nav__link:hover::after {
+.header__content .header__nav .nav-item .nav-item__link:hover::after {
     width: 100%
 }
 
-.header__content .header__nav .nav__item .nav__link::after {
+.header__content .header__nav .nav-item .nav-item__link::after {
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
@@ -546,22 +547,22 @@ p {
     height: 2px
 }
 
-.header__content .down_arrow {
+.header__content .down-arrow {
     display: none;
     margin: auto;
     width: 2rem;
     height: 2rem
 }
 
-.header__content .down_arrow:hover {
+.header__content .down-arrow:hover {
     bottom: -5px
 }
 
-.header__content .down_arrow:hover img {
+.header__content .down-arrow:hover img {
     opacity: .8
 }
 
-.header__content .down_arrow img {
+.header__content .down-arrow img {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -579,16 +580,17 @@ p {
 }
 
 .about .container {
-    grid-template-columns: 1fr 1fr
-}
-
-.about .container .about__left {
-    border-right: 1px solid #ededed;
-    padding: 0 3rem 0 0
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
 }
 
 .about .container .about__video {
     padding-bottom: 1rem
+}
+
+
+.about .container .about__video video {
+    width: 100%
 }
 
 .about .container .about__text__title {
@@ -597,11 +599,7 @@ p {
     padding-bottom: 1rem
 }
 
-.about .container .about__right {
-    padding: 0 0 0 3rem
-}
-
-.about .container .about__right .about__item {
+.about .container .about__col .about__item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -613,7 +611,7 @@ p {
     padding-bottom: 2rem
 }
 
-.about .container .about__right .about__item .item__image {
+.about .container .about__col .about__item .icon {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -621,12 +619,6 @@ p {
     padding-right: 1.5rem
 }
 
-.about .container .about__right .about__item .item__text {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1
-}
 
 .portfolio {
     padding: .2rem;
@@ -639,23 +631,52 @@ p {
     background-size: cover;
     background-position: center center;
     border: 2px solid #ededed;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
+    display: flex;
     align-items: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     position: relative;
     color: #fff;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease
+}
+
+.portfolio__item:nth-child(1) {
+    background-image: url(../img/1.jpg)
+}
+
+.portfolio__item:nth-child(2) {
+    background-image: url(../img/2.jpg)
+}
+
+.portfolio__item:nth-child(3) {
+    background-image: url(../img/3.jpg)
+}
+
+.portfolio__item:nth-child(4) {
+    background-image: url(../img/4.jpg)
+}
+
+.portfolio__item:nth-child(5) {
+    background-image: url(../img/5.jpg)
+}
+
+.portfolio__item:nth-child(6) {
+    background-image: url(../img/6.jpg)
+}
+
+.portfolio__item:nth-child(7) {
+    background-image: url(../img/7.jpg)
+}
+
+.portfolio__item:nth-child(8) {
+    background-image: url(../img/8.jpg)
+}
+
+.portfolio__item:nth-child(9) {
+    background-image: url(../img/9.jpg)
 }
 
 .portfolio__item::before {
@@ -672,14 +693,14 @@ p {
     opacity: .1
 }
 
-.portfolio__item .portfolio__item__name {
+.portfolio__item .name {
     font-family: roboto-r, sans-serif;
     font-size: 1.2rem;
     padding-bottom: 1rem
 }
 
 .portfolio__item .btn,
-.portfolio__item .portfolio__item__name {
+.portfolio__item .name {
     display: none
 }
 
@@ -688,7 +709,7 @@ p {
 }
 
 .portfolio__item:hover .btn,
-.portfolio__item:hover .portfolio__item__name {
+.portfolio__item:hover .name {
     display: inline-block;
     z-index: 1
 }
@@ -741,15 +762,15 @@ p {
     border: 1px solid #ededed
 }
 
-.service__item:hover .service__item__name {
+.service__item:hover .service__item .name {
     color: #2196cd
 }
 
-.service__item__img {
+.service__item .image {
     padding: 0 2rem
 }
 
-.service__item__name {
+.service__item .name {
     padding: 1rem 0
 }
 
@@ -838,7 +859,7 @@ p {
     font-size: 1.2rem
 }
 
-.contact .contact_title {
+.contact .contact__title {
     color: #ededed;
     padding-bottom: 1rem
 }
@@ -882,29 +903,29 @@ p {
     grid-template-columns: repeat(2, 1fr)
 }
 
-.feedback__form__item {
+.form-item {
     grid-column: 1
 }
 
-.feedback__form__item:nth-child(1) {
+.form-item:nth-child(1) {
     grid-row: 1
 }
 
-.feedback__form__item:nth-child(2) {
+.form-item:nth-child(2) {
     grid-row: 2
 }
 
-.feedback__form__item:nth-child(3) {
+.form-item:nth-child(3) {
     grid-row: 3
 }
 
-.feedback__form__item:nth-child(4) {
+.form-item:nth-child(4) {
     grid-column: 2;
     grid-row: 1/4
 }
 
-.feedback__form__item input,
-.feedback__form__item textarea {
+.form-item input,
+.form-item textarea {
     width: 100%;
     padding: .5rem .8rem;
     -webkit-transition: .5s ease;
@@ -914,51 +935,51 @@ p {
     border-radius: 2px
 }
 
-.feedback__form__item textarea {
+.form-item textarea {
     height: 100%
 }
 
-.feedback__form__item input[type=text],
-.feedback__form__item textarea {
+.form-item input[type=text],
+.form-item textarea {
     font-family: roboto-l, sans-serif;
     background-color: #58688c;
     outline: 0;
     border: none
 }
 
-.feedback__form__item input[type=text]::-webkit-input-placeholder,
-.feedback__form__item textarea::-webkit-input-placeholder {
+.form-item input[type=text]::-webkit-input-placeholder,
+.form-item textarea::-webkit-input-placeholder {
     color: #909dba
 }
 
-.feedback__form__item input[type=text]::-moz-placeholder,
-.feedback__form__item textarea::-moz-placeholder {
+.form-item input[type=text]::-moz-placeholder,
+.form-item textarea::-moz-placeholder {
     color: #909dba
 }
 
-.feedback__form__item input[type=text]:-ms-input-placeholder,
-.feedback__form__item textarea:-ms-input-placeholder {
+.form-item input[type=text]:-ms-input-placeholder,
+.form-item textarea:-ms-input-placeholder {
     color: #909dba
 }
 
-.feedback__form__item input[type=text]::placeholder,
-.feedback__form__item textarea::placeholder {
+.form-item input[type=text]::placeholder,
+.form-item textarea::placeholder {
     color: #909dba
 }
 
-.feedback__form__item input[type=text]:active,
-.feedback__form__item input[type=text]:focus,
-.feedback__form__item textarea:active,
-.feedback__form__item textarea:focus {
+.form-item input[type=text]:active,
+.form-item input[type=text]:focus,
+.form-item textarea:active,
+.form-item textarea:focus {
     background-color: #ededed
 }
 
-.feedback__form__btn {
+.form-btn {
     grid-column: 1/3;
     grid-row: 4
 }
 
-.feedback__form__btn input[type=submit] {
+.form-btn input[type=submit] {
     width: 12rem;
     font-size: 1rem;
     margin: 0;
@@ -992,24 +1013,24 @@ p {
 }
 
 @media only screen and (max-width:992px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     section {
-        padding: 3rem 0
+        padding: 2rem 0
     }
 
     .about .container {
         display: block
     }
 
-    .about .container .about__left {
+    .about .container .about__col {
         border: none
     }
 
-    .about .container .about__left .about__video video {
-        width: 600px
-    }
-
-    .about .container .about__right {
-        padding: 3rem 0 0 0
+    .about .container .about__col {
+        padding: 0
     }
 
     .portfolio {
@@ -1045,15 +1066,15 @@ p {
         grid-gap: .5rem
     }
 
-    .service__item__img {
+    .service__item .image {
         padding: 0 1rem
     }
 
-    .service__item__name {
+    .service__item .name {
         font-size: 1.2rem
     }
 
-    .service__item__descr {
+    .service__item p {
         font-size: .9rem;
         line-height: 1.3
     }
@@ -1073,28 +1094,24 @@ p {
         display: none
     }
 
-    .header__content .down_arrow {
+    .header__content .down-arrow {
         display: block
     }
 
-    .header .header__content__title {
+    .header .heade__title {
         padding-bottom: 5rem
     }
 
-    .header .header__content__title h1 {
+    .header .heade__title h1 {
         font-size: 3.5rem
     }
 
-    .header .header__content__title h1 span {
+    .header .heade__title h1 span {
         font-size: 5rem
     }
 
-    .header .header__content__title h2 {
+    .header .heade__title h2 {
         font-size: 2rem
-    }
-
-    .about .container .about__left .about__video video {
-        width: 400px
     }
 
     .service__content {
@@ -1122,11 +1139,11 @@ p {
         display: block
     }
 
-    .contact .feedback__form__item {
+    .contact .form-item {
         margin-bottom: 1rem
     }
 
-    .contact .feedback__form__item textarea {
+    .contact .form-item textarea {
         min-height: 10rem
     }
 }
@@ -1137,23 +1154,20 @@ p {
     }
 
     h3 {
-        font-size: 1.8rem
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem
     }
 
-    .header .header__content__title h1 {
+    .header .heade__title h1 {
         font-size: 3rem
     }
 
-    .header .header__content__title h1 span {
+    .header .heade__title h1 span {
         font-size: 3rem
     }
 
-    .header .header__content__title h2 {
+    .header .heade__title h2 {
         font-size: 1.5rem
-    }
-
-    .about .container .about__left .about__video video {
-        width: 250px
     }
 
     .about .container .about__text__title {
@@ -1161,7 +1175,7 @@ p {
         padding-bottom: .8rem
     }
 
-    .about .container .about__right .about__item {
+    .about .container .about__col .about__item {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -1169,7 +1183,7 @@ p {
         flex-direction: column
     }
 
-    .about .container .about__right .about__item .item__image {
+    .about .container .about__col .about__item .icon {
         padding-bottom: 1rem;
         -webkit-align-self: start;
         -ms-flex-item-align: start;
@@ -1205,8 +1219,10 @@ p {
         display: block
     }
 
-    .service__item__img {
-        padding: 0 3rem
+    .service__item .image {
+        padding: 0;
+        width: 80px;
+        margin: auto;
     }
 
     .testimonials .quote {

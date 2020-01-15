@@ -5,32 +5,24 @@
 	background-color: white
 	.container
 		grid-template-columns: 1fr 1fr
-
-		.about__left
-			border-right: 1px solid $light
-			padding: 0 3rem 0 0
+		grid-gap: 3rem
 
 		.about__video
 			padding-bottom: 1rem
+			video
+				width: 100%
 
 		.about__text__title
 			font-family: 'roboto-r', sans-serif
 			font-size: 1.7rem
 			padding-bottom: 1rem
 
+		.about__item
+			display: flex
+			align-items: flex-start
+			padding-bottom: 2rem
 
-		.about__right
-			padding: 0 0 0 3rem
-
-			.about__item
-				display: flex
-				align-items: flex-start
-				padding-bottom: 2rem
-
-				.item__image
-					align-self: center
-					width: 5rem
-					padding-right: 1.5rem
-
-				.item__text
-					flex: 1
+			.icon
+				align-self: center
+				width: 5rem
+				padding-right: 1.5rem

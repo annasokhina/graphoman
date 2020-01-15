@@ -2,8 +2,10 @@
 	min-height: 100vh
 	background-size: cover
 	background-position: center
-	align-content: center
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../img/bg.jpg)
 	&::before
 		content: ''
 		position: absolute
@@ -21,7 +23,7 @@
 	text-align: center
 	padding: 1rem
 	
-	.header__content__title
+	.heade__title
 		padding-bottom: 9rem
 		h1
 			font-family: 'luciano', sans-serif
@@ -40,34 +42,34 @@
 			opacity: 0.8
 
 	.header__nav
-		.nav__item
+		.nav-item
 			padding: 0 1rem
 
-			.nav__link
-	      position: relative
-	      display: block
-	      padding: 0 0.4rem
-	      font-size: 1rem
-	      font-family: 'roboto-m', sans-serif
-	      text-transform: uppercase
-	      color: white
-	      transition: .5s ease
-	      &:hover
-	        &::after
+			.nav-item__link
+		      position: relative
+		      display: block
+		      padding: 0 0.4rem
+		      font-size: 1rem
+		      font-family: 'roboto-m', sans-serif
+		      text-transform: uppercase
+		      color: white
+		      transition: .5s ease
+		&:hover
+			&::after
 	          width: 100%
-	      &::after
-	        transition: all .5s
-	        position: absolute
-	        bottom: 0
-	        left: 0
-	        right: 0
-	        margin: auto
-	        width: 0%   
-	        content: ''
-	        background: $light
-	        height: 2px
+		&::after
+			transition: all .5s
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			width: 0%
+			content: ''
+			background: $light
+			height: 2px
 
-	.down_arrow
+	.down-arrow
 		display: none
 		margin: auto
 		width: 2rem
@@ -80,4 +82,3 @@
 			transform: rotate(90deg)
 			transition: .5s ease
 			opacity: 0.5
-	

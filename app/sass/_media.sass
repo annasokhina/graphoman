@@ -1,27 +1,24 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
+	/*==========  Desktop First  ==========*/
 
-/* Large Devices, Wide Screens */
+	/* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
 
 
-/* Medium Devices, Desktops */
+	/* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	.container 
+		padding: 0 1rem
 	section
-		padding: 3rem 0
+		padding: 2rem 0
 	
 	.about
 		.container
 			display: block
-			.about__left 
-				border: none
-				.about__video
-					video
-						width: 600px
-			.about__right
-				padding: 3rem 0 0 0
+			.about__col
+				padding: 0
 
 
 	.portfolio
@@ -56,7 +53,7 @@
 	/**/
 
 
-/* Small Devices, Tablets */
+	/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	h3
 		font-size: 2.2rem
@@ -68,25 +65,19 @@
 		&__content
 			.header__nav
 				display: none
-			.down_arrow
+			.down-arrow
 				display: block
 
 
-		.header__content__title
-    	padding-bottom: 5rem
-    	h1
-    		font-size: 3.5rem
-    		span
-    			font-size: 5rem
-    	h2 
+		.heade__title
+			padding-bottom: 5rem
+		h1
+			font-size: 3.5rem
+			span
+				font-size: 5rem
+		h2 
     	 font-size: 2rem
 
-	.about
-		.container
-			.about__left
-				.about__video
-					video
-						width: 400px
 	.service
 		&__content
 			grid-template-columns: repeat(2, 1fr)
@@ -116,34 +107,31 @@
 	/**/
 
 
-/* Extra Small Devices, Phones */
+	/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	section
 		line-height: 1.3
 	h3
-		font-size: 1.8rem
+		font-size: 1.5rem
+		padding-bottom: 1.5rem
 	.header
-		.header__content__title
-    	h1
-    		font-size: 3rem
-    		span
-    			font-size: 3rem
-    	h2 
+		.heade__title
+		h1
+			font-size: 3rem
+			span
+				font-size: 3rem
+		h2 
     	 font-size: 1.5rem
 
 	.about
 		.container
-			.about__left
-				.about__video
-					video
-						width: 250px
 			.about__text__title
 				font-size: 1.4rem
 				padding-bottom: 0.8rem
-			.about__right
+			.about__col
 				.about__item
 					flex-direction: column
-					.item__image
+					.icon
 						padding-bottom: 1rem
 						align-self: start
 
@@ -166,8 +154,11 @@
 	.service
 		&__content
 			display: block
-		&__item__img
-			padding: 0 3rem
+	.service__item
+		.image
+			padding: 0
+			width: 100px
+			margin: auto
 
 	.testimonials
 		.quote
@@ -176,35 +167,35 @@
 	/**/
 
 
-/* Custom, iPhone Retina */
+	/* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 
 	/**/
 
 
-/*==========  Mobile First  ==========*/
+	/*==========  Mobile First  ==========*/
 
-/* Custom, iPhone Retina */
+	/* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
 	/**/
 
 
-/* Extra Small Devices, Phones */
+	/* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	/**/
 
 
-/* Small Devices, Tablets */
+	/* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
 	/**/
 
 
-/* Medium Devices, Desktops */
+	/* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
 	/**/
 
 
-/* Large Devices, Wide Screens */
+	/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
 
